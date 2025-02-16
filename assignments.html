@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <h2>Teacher Panel</h2>
+            <ul>
+                <li onclick="location.href='index.html'"><i class="fas fa-home"></i> Home</li>
+                <li onclick="location.href='students.html'"><i class="fas fa-user"></i> Students</li>
+                <li onclick="location.href='analytics.html'"><i class="fas fa-chart-bar"></i> Analytics</li>
+                <li onclick="location.href='assignments.html'"><i class="fas fa-tasks"></i> Assignments</li>
+                <li onclick="location.href='progress.html'"><i class="fas fa-chart-line"></i> Progress</li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <h1>Analytics Dashboard</h1>
+            <canvas id="studentChart"></canvas>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const ctx = document.getElementById("studentChart").getContext("2d");
+            new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: ["Student A", "Student B", "Student C"],
+                    datasets: [{
+                        label: "Progress %",
+                        data: [80, 65, 90],
+                        backgroundColor: ["#C8A2C8", "#E6A8D7", "#D8BFD8"]
+                    }]
+                }
+            });
+        });
+    </script>
+</body>
+</html>

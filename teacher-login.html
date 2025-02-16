@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Login - DOODLEDOJO</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="branding">DOODLEDOJO</div>
+    <div class="login-container">
+        <h1>Teacher Login</h1>
+        <form id="teacher-form">
+            <input type="text" id="teacher-username" placeholder="Username" required>
+            <input type="password" id="teacher-password" placeholder="Password" required>
+            <button class="glow" type="submit">Login</button>
+        </form>
+        <p class="back-link"><a href="index.html">🔙 Back</a></p>
+    </div>
+</body>
+</html>
+
+<style>
+/* Modern Black & Lilac Theme */
+body {
+    background: radial-gradient(circle, #2C003E, #0D021A);
+    color: #E6A8D7;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+/* Branding at Top-Right Corner */
+.branding {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #E6A8D7;
+    text-shadow: 0px 0px 10px rgba(230, 168, 215, 0.7);
+}
+
+/* Login Container */
+.login-container {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(230, 168, 215, 0.2);
+    backdrop-filter: blur(10px);
+    width: 350px;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #E6A8D7;
+    font-size: 16px;
+}
+
+/* Role Selection Buttons */
+button {
+    background: linear-gradient(90deg, #C8A2C8, #E6A8D7);
+    color: #1a1a2e;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0px 6px 15px rgba(200, 162, 200, 0.3);
+    text-transform: uppercase;
+    margin: 10px;
+    width: 100%;
+}
+
+/* Button Hover & Animation */
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 10px 20px rgba(230, 168, 215, 0.5);
+    background: linear-gradient(90deg, #E6A8D7, #C8A2C8);
+}
+
+/* Glowing Animation */
+@keyframes glow {
+    0% { box-shadow: 0px 0px 10px rgba(230, 168, 215, 0.4); }
+    50% { box-shadow: 0px 0px 20px rgba(230, 168, 215, 0.7); }
+    100% { box-shadow: 0px 0px 10px rgba(230, 168, 215, 0.4); }
+}
+
+button.glow {
+    animation: glow 2s infinite alternate;
+}
+</style>

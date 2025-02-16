@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script defer src="auth.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Teacher Panel</h2>
+            <ul>
+                <li onclick="location.href='index.html'"><i class="fas fa-home"></i> Home</li>
+                <li onclick="location.href='students.html'"><i class="fas fa-user"></i> Students</li>
+                <li onclick="location.href='analytics.html'"><i class="fas fa-chart-bar"></i> Analytics</li>
+                <li onclick="location.href='assignments.html'"><i class="fas fa-tasks"></i> Assignments</li>
+                <li onclick="location.href='progress.html'"><i class="fas fa-chart-line"></i> Progress</li>
+                <li onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <h1>Welcome, Teacher!</h1>
+            <p>Monitor student progress, assignments, and analytics from here.</p>
+
+            <div class="dashboard-cards">
+                <div class="card" onclick="location.href='students.html'">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>Manage Students</h3>
+                </div>
+                <div class="card" onclick="location.href='analytics.html'">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>View Analytics</h3>
+                </div>
+                <div class="card" onclick="location.href='assignments.html'">
+                    <i class="fas fa-tasks"></i>
+                    <h3>Manage Assignments</h3>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
